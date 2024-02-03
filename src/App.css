@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}.app__navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 0;
+  align-items: center;
+  background-color:orangered;
+  position: relative;
+}
+.app__navbar-links{
+  display: flex;
+  text-decoration: none;
+  gap: 2rem;
+  color: white;
+}
+.app__navbar-links Link{
+  text-decoration: none;
+  color: white;
+}
+.limenu{
+  color: white;
+  text-decoration: none;
+  transition: ease-in-out .5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__nabar-logo h1{
+  color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__nabar-logo h1 span{
+  color: green;
 }
+.menuToggle{
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.openlink{
+  display: block;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.closelink{
+  display: none;
+}
+.app__home{
+  background-image: url("assets/images/pizza5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  height: 60vh;
+}
+.app__home-header h1{
+  margin: 1rem 0;
+  color: white;
+}
+.app__home-header p{
+  margin: 1rem 0;
+  font-weight: bold;
+}
+.app__home-header button{
+  padding: .5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0,0.9);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.app__footer{
+  background-color: black;
+  padding: 1rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* min-height: 55vh; */
+}
+.app__footer-copy{
   color: white;
+  margin: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.app__footer-links{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.app__footer-links_quick,.app__footer-links_social,.app__footer-links_contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__menu-foods{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 2rem;
+  justify-content: center;
+}
+.app__menu-fooditem{
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0,0.9);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.app__menu-fooditem button{
+  padding: .5rem;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0,.4);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: .5rem;
+}
+.menuitem__image{
+  width: 240px;
+  height: 150px;
+  border-radius: 5px;
+  margin: auto;
+  border-radius: 10px;
+}
+.app__menu-fooditem h3{
+  font-size: 1rem;
+  margin: 1rem;
+}
+.app__menu-fooditem small{
+  margin: .5rem;
+}
+.menuitem__image img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+
+}
+.app__about-top_image{
+  width: 500px;
+  height: 500px;
+}
+.app__about-top_image img{
+  width: 100%;
+  /* height: 100%; */
+}
+.app__about-top{
+  display: flex;
+  margin: 1rem 2rem;
+  gap: 2rem;
+}
+.app__about-top_content{
+  flex: 1;
+}
+.app__about-top_content p{
+  line-height: 2rem;
+  font-weight: 600;
+}
+.app__about-top_content h2{
+  line-height: 3rem;
+}
+.app__about-bottom {
+  border: 1px solid black;
+}
+.app__about-bottom h2{
+  margin: 1rem 2rem;
+}
+
+.app__about-bottom_whyus{
+  display: flex;
+  margin: 1rem;
+  gap: 2rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.app__about-why_card{
+  width: 180px;
+  /* height: 200px; */
+  box-shadow: 0px 0px 10px rgb(0, 0, 0,.8);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+
+}
+.app__about-why_card p{
+  color: black;
+  font-weight: 500;
+
+}
+
+.icon{
+  font-size: 2rem;
+  color: orangered;
+}
+.app__menu-price{
+  color: orangered;
+  font-weight: bold;
+}
+
+@media screen and (max-width:650px) {
+  .app__navbar-links#openlink{
+    display: block;
+    gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .app__navbar-links#openlink .limenu{
+    margin: 1rem;
+  }
+  .app__navbar-links#closelink{
+    display: none;
+  }
+  .menuToggle{
+    display: block;
+    cursor: pointer;
+    right: 1rem;
+    
+  }
+  #openLogo{
+    display: none;
+  }
+  #closeLogo{
+    display: block;
   }
 }
+
+  
